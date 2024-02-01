@@ -26,6 +26,6 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: |
           curl -X POST \
-              -H "Authorization: Bearer $({ secret.RENDER_KEY })" \
+              -H "Authorization: Bearer ${{ secret.RENDER_KEY }}" \
               -H "Content-Type: application/json" \
-              "$({ secrets.RENDER_DEPLOY })"
+              "${{ secrets.RENDER_DEPLOY }}"
